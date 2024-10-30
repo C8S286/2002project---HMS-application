@@ -1,3 +1,5 @@
+package Info;
+
 public class Medicine {
     private String medicineName;
     private String dosage; // e.g., "500mg", "10ml"
@@ -54,7 +56,7 @@ public class Medicine {
 
     // Display medicine details
     public void displayMedicineInfo() {
-        System.out.println("Medicine Name: " + medicineName);
+        System.out.println("Info.Medicine Name: " + medicineName);
         System.out.println("Dosage: " + dosage);
         System.out.println("Stock Level: " + stockLevel);
         System.out.println("Low Stock Alert Level: " + lowStockAlertLevel);

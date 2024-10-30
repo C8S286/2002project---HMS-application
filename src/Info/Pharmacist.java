@@ -1,10 +1,12 @@
+package Info;
+
 public class Pharmacist extends User {
-    // Additional attributes for Pharmacist
+    // Additional attributes for Info.Pharmacist
     private String pharmacistID;
 
     // Constructor
     public Pharmacist(String userID, String password, String pharmacistID) {
-        super(userID, password, "Pharmacist");
+        super(userID, password, "Info.Pharmacist");
         this.pharmacistID = pharmacistID;
     }
 
@@ -15,8 +17,8 @@ public class Pharmacist extends User {
 
     // Display pharmacist information
     public void displayPharmacistInfo() {
-        displayUserInfo(); // Calls the method from User class
-        System.out.println("Pharmacist ID: " + pharmacistID);
+        displayUserInfo(); // Calls the method from Info.User class
+        System.out.println("Info.Pharmacist ID: " + pharmacistID);
     }
 
     // Method to update prescription status

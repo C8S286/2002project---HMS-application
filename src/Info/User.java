@@ -1,3 +1,5 @@
+package Info;
+
 public class User {
     private String userID;
     private String password;
@@ -45,7 +47,7 @@ public class User {
 
     //to display user details
     public void displayUserInfo() {
-        System.out.println("User ID: " + userID);
+        System.out.println("Info.User ID: " + userID);
         System.out.println("Role: " + role);
     }
 

@@ -1,10 +1,12 @@
+package Info;
+
 public class Administrator extends User {
-    // Additional attributes for Administrator
+    // Additional attributes for Info.Administrator
     private String adminID;
 
     // Constructor
     public Administrator(String userID, String password, String adminID) {
-        super(userID, password, "Administrator");
+        super(userID, password, "Info.Administrator");
         this.adminID = adminID;
     }
 
@@ -15,7 +17,7 @@ public class Administrator extends User {
 
     // Display administrator information
     public void displayAdminInfo() {
-        displayUserInfo(); // Calls the method from User class
+        displayUserInfo(); // Calls the method from Info.User class
         System.out.println("Admin ID: " + adminID);
     }
 
@@ -26,7 +28,7 @@ public class Administrator extends User {
 
     // Method to manage inventory
     public void manageInventory(String medicineName, int quantity, String action) {
-        System.out.println("Medicine: " + medicineName + " has been " + action + " with quantity " + quantity);
+        System.out.println("Info.Medicine: " + medicineName + " has been " + action + " with quantity " + quantity);
     }
 }
 

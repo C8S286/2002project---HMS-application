@@ -1,3 +1,5 @@
+package Info;
+
 public class Patient extends User implements PersonalInfo {
     private String patientID;
     private String name;
@@ -8,7 +10,7 @@ public class Patient extends User implements PersonalInfo {
 
     // Constructor
     public Patient(String userID, String password, String patientID, String name, String dateOfBirth, String gender, String contactInfo, String bloodType) {
-        super(userID, password, "Patient");
+        super(userID, password, "Info.Patient");
         this.patientID = patientID;
         this.name = name;
         this.dateOfBirth = dateOfBirth;
@@ -17,7 +19,7 @@ public class Patient extends User implements PersonalInfo {
         this.bloodType = bloodType;
     }
 
-    // Implementing methods from PersonalInfo
+    // Implementing methods from Info.PersonalInfo
     @Override
     public String getName() {
         return name;
@@ -43,7 +45,7 @@ public class Patient extends User implements PersonalInfo {
         this.contactInfo = contactInfo;
     }
 
-    // Additional methods for Patient
+    // Additional methods for Info.Patient
     public String getPatientID() {
         return patientID;
     }
@@ -54,8 +56,8 @@ public class Patient extends User implements PersonalInfo {
 
     // Display patient information
     public void displayPatientInfo() {
-        displayUserInfo(); // Calls the method from User class
-        System.out.println("Patient ID: " + patientID);
+        displayUserInfo(); // Calls the method from Info.User class
+        System.out.println("Info.Patient ID: " + patientID);
         System.out.println("Name: " + name);
         System.out.println("Date of Birth: " + dateOfBirth);
         System.out.println("Gender: " + gender);

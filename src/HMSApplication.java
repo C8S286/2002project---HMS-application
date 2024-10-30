@@ -1,3 +1,8 @@
+import UserMenu.AdministratorMenu;
+import UserMenu.DoctorMenu;
+import UserMenu.PatientMenu;
+import UserMenu.PharmacistMenu;
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -15,7 +20,7 @@ public class HMSApplication {
         String password;
         boolean isAuthenticated = false;
 
-        // User authentication loop
+        // Info.User authentication loop
         while (!isAuthenticated) {
             System.out.print("Enter your Hospital ID: ");
             hospitalID = scanner.nextLine();
@@ -36,20 +41,20 @@ public class HMSApplication {
     }
 
     // Initialize users with their credentials and roles
-    //should read date from excel????
+    // should read date from excel????
     private static void initializeUsers() {
         // Sample data
         userCredentials.put("P1001", "password");
-        userRoles.put("P1001", "Patient");
+        userRoles.put("P1001", "Info.Patient");
 
         userCredentials.put("D2001", "password");
-        userRoles.put("D2001", "Doctor");
+        userRoles.put("D2001", "Info.Doctor");
 
         userCredentials.put("PH3001", "password");
-        userRoles.put("PH3001", "Pharmacist");
+        userRoles.put("PH3001", "Info.Pharmacist");
 
         userCredentials.put("A4001", "password");
-        userRoles.put("A4001", "Administrator");
+        userRoles.put("A4001", "Info.Administrator");
 
         // Additional users can be added here
     }
@@ -66,28 +71,28 @@ public class HMSApplication {
 
         while (running) {
             switch (userRole) {
-                case "Patient":
+                case "Info.Patient":
                     PatientMenu.displayMenu();
                     int patientChoice = scanner.nextInt();
                     scanner.nextLine(); // Consume the newline character
                     PatientMenu.handleChoice(patientChoice);
                     if (patientChoice == 9) running = false; // Logout option
                     break;
-                case "Doctor":
+                case "Info.Doctor":
                     DoctorMenu.displayMenu();
                     int doctorChoice = scanner.nextInt();
                     scanner.nextLine(); // Consume the newline character
                     DoctorMenu.handleChoice(doctorChoice);
                     if (doctorChoice == 8) running = false; // Logout option
                     break;
-                case "Pharmacist":
+                case "Info.Pharmacist":
                     PharmacistMenu.displayMenu();
                     int pharmacistChoice = scanner.nextInt();
                     scanner.nextLine(); // Consume the newline character
                     PharmacistMenu.handleChoice(pharmacistChoice);
                     if (pharmacistChoice == 5) running = false; // Logout option
                     break;
-                case "Administrator":
+                case "Info.Administrator":
                     AdministratorMenu.displayMenu();
                     int adminChoice = scanner.nextInt();
                     scanner.nextLine(); // Consume the newline character

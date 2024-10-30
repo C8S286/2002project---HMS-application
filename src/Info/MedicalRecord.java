@@ -1,3 +1,5 @@
+package Info;
+
 public class MedicalRecord {
     private String patientID;
     private String[] pastDiagnoses;
@@ -53,7 +55,7 @@ public class MedicalRecord {
 
     // Display medical record information
     public void displayRecord() {
-        System.out.println("Patient ID: " + patientID);
+        System.out.println("Info.Patient ID: " + patientID);
         System.out.println("Diagnoses: " + String.join(", ", pastDiagnoses));
         System.out.println("Treatments: " + String.join(", ", treatments));
         System.out.println("Additional Notes: " + additionalNotes);
